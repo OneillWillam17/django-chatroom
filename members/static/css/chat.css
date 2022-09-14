@@ -1,0 +1,35 @@
+#chat-log {
+    position: relative;
+    top: 90px;
+    padding-right: 170px;
+    resize: none;
+}
+
+#chat-message-input {
+    position: relative;
+    top: 81px;
+    left: 5px;
+}
+
+#chat-message-submit {
+    position: relative;
+    top: 81px;
+    left: -5px;
+    width: 175px;
+}
+
+textarea {
+    outline: none;
+    overflow: auto;
+    width: 718px;
+    height: 682px;
+    font-size: 160%;
+}
+
+input {
+    border: 1px solid #00000073;
+}
+
+input:focus {
+    border: 1px solid #00000073;
+}

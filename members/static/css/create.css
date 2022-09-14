@@ -1,0 +1,42 @@
+body {
+    text-align: left;
+}
+
+.form-group {
+    padding: 10px;
+    padding-left: 90px;
+    padding-top: 50px;
+}
+
+button {
+    position: relative;
+    left: 290px;
+    top: 40px;
+}
+
+#hint_id_username {
+    position: absolute;
+    top: 200px;
+    left: 675px;
+}
+
+#hint_id_password1 {
+    font-size: 80%;
+    position: absolute;
+    left: 675px;
+    top: 340px;
+}
+
+#hint_id_password2 {
+    position: absolute;
+    top: 570px;
+    left: 675px;
+}
+
+#div_id_password1 {
+    padding-bottom: 100px;
+  }
+
+span {
+    padding-right: 18px;
+}

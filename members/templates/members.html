@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}introduction{% endblock %}</title>
+</head>
+{% block content %}
+<div class="background">
+    <div class="content">
+      <body>
+        <h2>Welcome to the chatroom</h2>
+        <P>Hey folks, my name is William O'Neill.</P>
+        <P>This was my first venture into the world of webdevelopment.</P>
+        <P>It's a simple chatroom requiring a login and password to access.</P>
+        <P>I've used a small amount of flask in the past but nothing beyond a simple introduction page</P>
+        <P>This is made using django's framework and their 'channels' (websockets).</P>
+        <P>I spent a lot of time figuring this one out and i'm pretty happy with how it came out.</P>
+        <P>without further ado</P>
+        <br>
+        <button onclick="location.href='/login'" type="button">Login</button>
+        <p>or</p>
+        <button onclick="location.href='/members/add'" type="button">Create an Account</button>
+        <br>
+        <br>
+        <br>
+        <div class="personal">
+          <p>About me</p>
+          <div class="github">
+            <a href="https://github.com/OneillWillam17">
+              <div class="git-img">
+                <img src="\static\css\github photo.PNG" alt="https://github.com/OneillWillam17">
+              </div>
+            </a>
+          </div>
+          <div class="info">
+            <p>Website made by William O'Neill, September 2022</p>
+            <p>Email: oneill.william17@gmail.com</p>
+            <p>Phone: 469-525-2537</p>
+          </div>
+          <div class="copyright">
+            <p>© William O'Neill 2022</p>
+          </div>
+          <br>
+        </div>
+      </body>
+  </div>
+</div>
+{% endblock %}
+</html>
