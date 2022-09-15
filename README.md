@@ -14,4 +14,4 @@ Doing the HTML / CSS work for the site was actually pretty enjoyable, even thoug
 # Images 
 ![imgur](https://i.imgur.com/vsEu1D1.png "Intro Page")
 
-![imgur](https://i.imgur.com/X7ExyjC.png "Chatroom")
+![imgur](https://i.imgur.com/0NKItbD.png "ChatroomV2")
