@@ -17,10 +17,18 @@
   <div class="background">
     <div class="content">
       <body>
+        <div class="box"></div>
         <textarea id="chat-log" cols="100" rows="40" readonly placeholder="Say hi!"></textarea>
+        <textarea id="name_date" readonly></textarea>
         <input id="chat-message-input" type="text" size="100" placeholder="Message...">
         <input id="chat-message-submit" type="button" value="Send">
         <script>
+            // setup / various js
+            var username = '{{ username }}';
+            var chat_log = document.getElementById('chat-log');
+            var name_date = document.getElementById('name_date');
+
+            // backend for chatroom
             const chatSocket = new WebSocket(
               'ws://' + window.location.host + '/ws/members/chat/'
             );
@@ -29,7 +37,12 @@
               let time = new Date();
               let strTime = time.toLocaleString([], { hour: '2-digit', minute: '2-digit'});
               const data = JSON.parse(e.data);
-              document.querySelector('#chat-log').value += (strTime + " - " + data.message + '\n');
+              document.querySelector('#name_date').value += (`${data.username} at ${strTime}\n`)
+              document.querySelector('#chat-log').value += (`${data.message}\n`);
+
+              // auto scrolls the text areas after new message
+              chat_log.scrollTop = chat_log.scrollHeight
+              name_date.scrollTop = name_date.scrollHeight
             };
 
             chatSocket.onclose = function(e) {
@@ -48,6 +61,7 @@
               const message = messageInputDom.value;
 
               chatSocket.send(JSON.stringify({
+                'username': username,
                 'message': message
               }));
 
