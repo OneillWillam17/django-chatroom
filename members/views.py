@@ -23,4 +23,4 @@ def home(response):
 
 @login_required
 def chat(response):
-    return render(response, 'chat.html', {})
+    return render(response, 'chat.html', {'username': response.user.username})
